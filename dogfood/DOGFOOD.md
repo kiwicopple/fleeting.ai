@@ -73,3 +73,8 @@ functions
 ```
 
 Now if I try to call `POST 'http://localhost:54321/functions/v1/gte-small'` i get "not found and if I call`POST 'http://localhost:54321/functions/v1/embed/gte-small'` I get "bad request".
+
+
+I asked clippy: "is it possible to nest edge functions in sub folders?". It gave a helpful ![answer](/dogfood/assets/clippy1.png) but also an unhelpful ![answer](/dogfood/assets/clippy2.png) (there is no "edge.yaml"?)
+
+Is this even possible?
