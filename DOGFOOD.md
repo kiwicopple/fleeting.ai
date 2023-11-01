@@ -2,17 +2,17 @@
 
 I'm dogfooding Supabase Edge Functions specifically for AI use-cases. This is a Friction Log as I go through the process of creating this server. I know I can do this easily with Express/Fastify. Is it just as simple with Edge Functions?
 
-### Nothing getting returned from function
+## Nothing getting returned from function
 
 I ran `supabase new embed` and then edited the route in the new file from `/hello-world` to `/gte-small`. I then opened my browser to `/functions/v1/embed/gte-small`. Nothing was returned. It turns out that I was supposed to edit the file to tbe `/embed/gte-small` (the file structure doesn't create the routes implicitly).
 
 
-### Functions not served from `supabase start`
+## Functions not served from `supabase start`
 
 I thought I could call the function after running `supabase start` but it looks like I need to run `supabase functions serve` as well? As a side note, why doesn't `supabase start` give a list of all the function URLs which I can execute (like it does for REST, GraphQL, etc).
 
 
-### `supabase start` be running to call `supabase functions serve`
+## `supabase start` be running to call `supabase functions serve`
 
 I stopped `supabase` and then ran  `supabase functions serve`. That didn't work. It turns out I need to run _both_  `supabase start` and `supabase functions serve`? A bit confusing.
 
@@ -30,7 +30,7 @@ curl -i --location --request POST 'http://localhost:54321/functions/v1/' \
 
 This was not correct - it should be `http://localhost:54321/functions/v1/gte-small`
 
-### Sub-routing
+## Sub-routing
 
 I want to serve serveral routes like:
 
